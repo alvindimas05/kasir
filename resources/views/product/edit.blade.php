@@ -4,7 +4,7 @@
         @vite('resources/scss/product/edit.scss')
     @endpush
     <div class="grid place-items-center mt-5">
-        <form action="{{ route('product.store') }}" method="post">
+        <form action="{{ route('product.update') }}" method="post">
             @csrf
             @method('PATCH')
             <input type="hidden" name="id" value="{{ $id }}">

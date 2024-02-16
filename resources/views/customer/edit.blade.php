@@ -1,25 +1,23 @@
 @extends('layouts.app')
 @section('content')
     @push('styles')
-        @vite('resources/scss/product/edit.scss')
+        @vite('resources/scss/customer/create.scss')
     @endpush
     <div class="grid place-items-center mt-5">
-        <form action="{{ route('product.store') }}" method="post">
+        <form action="{{ route('customer.store') }}" method="post">
             @csrf
-            @method('PATCH')
-            <input type="hidden" name="id" value="{{ $id }}">
-            <h1 class="text-center text-xl font-bold">Edit Produk</h1>
+            <h1 class="text-center text-xl font-bold">Edit Pelanggan</h1>
             <div class="my-2">
-                <input class="p-2 border outline-none" type="text" name="name" placeholder="Nama" value="{{ $product->name }}">
+                <input class="p-2 border outline-none" type="text" name="name" placeholder="Nama" value="{{ $customer->name }}">
             </div>
             <div class="my-2">
-                <input class="p-2 border outline-none" type="number" name="harga" placeholder="Harga" value="{{ floatval($product->harga) }}">
+                <input class="p-2 border outline-none" type="text" name="alamat" placeholder="Alamat" value="{{ $customer->alamat }}">
             </div>
             <div class="my-2">
-                <input class="p-2 border outline-none" type="number" name="stok" placeholder="Stok" value="{{ $product->stok }}">
+                <input class="p-2 border outline-none" type="number" name="no_telp" placeholder="No. Telp" value="{{ $customer->no_telp }}">
             </div>
             <div class="grid place-items-center">
-                <button class="bg-yellow-500 py-2 px-4 text-white" type="submit">Edit</button>
+                <button class="bg-yellow-400 p-2 text-white" type="submit">Edit</button>
             </div>
         </form>
     </div>
