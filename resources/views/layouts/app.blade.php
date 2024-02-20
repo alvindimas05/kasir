@@ -7,6 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        @vite('resources/js/app.js')
         @vite('resources/scss/app.scss')
         @stack('styles')
     </head>

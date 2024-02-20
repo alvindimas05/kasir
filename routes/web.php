@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CashierController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -11,6 +12,7 @@ Route::middleware('auth:sanctum')->group(function (){
         Route::get('create', 'create')->name('create');
         Route::get('edit/{id}', 'edit')->name('edit');
         Route::get('delete/{id}', 'delete')->name('delete');
+        Route::get('list', 'list')->name('list');
 
         Route::post('', 'store')->name('store');
         Route::patch('', 'update')->name('update');
@@ -25,6 +27,10 @@ Route::middleware('auth:sanctum')->group(function (){
 
         Route::post('', 'store')->name('store');
         Route::patch('', 'update')->name('update');
+    });
+
+    Route::controller(CashierController::class)->name('cashier.')->group(function (){
+        Route::get('', 'index')->name('index');
     });
 });
 

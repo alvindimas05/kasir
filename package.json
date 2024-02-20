@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.5.1",
-        "@fortawesome/pro-solid-svg-icons": "github:alvindimas05/pro-solid-svg-icons"
+        "@fortawesome/pro-solid-svg-icons": "github:alvindimas05/pro-solid-svg-icons",
+        "jquery": "^3.7.1"
     }
 }

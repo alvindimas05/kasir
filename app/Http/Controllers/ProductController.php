@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function list(){
+        $products = Product::all(['id', 'name', 'harga', 'stok']);
+        return response()->json($products);
+    }
     public function show(){
         $products = Product::all();
         return view('product.show', compact('products'));
