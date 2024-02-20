@@ -29,6 +29,10 @@ Route::middleware('auth:sanctum')->group(function (){
 });
 
 Route::controller(UserController::class)->prefix('user')->name('user.')->group(function (){
-   Route::get('login', 'show_login')->name('login.show');
-   Route::post('login', 'store_login')->name('login.store');
+    Route::get('login', 'show_login')->name('login.show');
+    Route::post('login', 'store_login')->name('login.store');
+    Route::get('register', 'show_register')->name('register.show');
+    Route::post('register', 'store_register')->name('register.store');
+    Route::get('login', 'logout')->name('login');
+    Route::get('logout', 'logout')->name('logout');
 });

@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.admin')
+@section('body')
     @push('styles')
         @vite('resources/scss/customer/create.scss')
     @endpush
